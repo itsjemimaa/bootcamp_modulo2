@@ -43,7 +43,16 @@
                     <label for="password">Contraseña:</label>
                     <input type="password" id="password" name="password"
                     required placeholder="Ingresa una contraseña"
-                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"> <br/>
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"
+                    oninvalid="setCustomValidity('El valor de entrada debe tener al menos 8 caracteres alfanuméricos')"
+                    oninput="setCustomValidity('')"> <br/>
+
+                    <!--<script>
+                        function checkInput(){
+                            var input = event.target;
+                            input.setCustomValidity(input.value.length < 8 ? "Minimo 8 caracteres" : "");
+                        }
+                    </script>-->
         
                     <br>
         
